@@ -7,9 +7,7 @@ import DashboardView from './components/DashboardView';
 import './App.css';
 
 function App() {
-
   const [currentView, setCurrentView] = useState('login');
-
   const [userLogged, setUserLogged] = useState(null);
 
   const handleLoginSuccess = (usuarioData) => {

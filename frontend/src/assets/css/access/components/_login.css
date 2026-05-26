@@ -1,3 +1,24 @@
+/* ==========================================================================
+   📦 ESTILOS DEL MÓDULO LOGIN (MIGRADOS A REACT & RESPONSIVE)
+   ========================================================================== */
+
+.login__container {
+    min-height: 100vh;
+    background-color: #f8fafc;
+    font-family: 'Montserrat', sans-serif;
+    display: grid;
+    grid-template-columns: 1fr; /* Una sola columna en móvil */
+}
+
+.login__content-form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem;
+    width: 100%;
+}
+
 .login__title {
     font-size: var(--big-font-size, 2rem);
     color: var(--title-color, #1f2937);
@@ -5,8 +26,15 @@
     margin-bottom: 2rem;
 }
 
-.login__group {
-    grid-template-columns: repeat(2, 1fr);
+.login__form {
+    width: 100%;
+    max-width: 380px;
+}
+
+.login__area {
+    display: grid;
+    row-gap: 1rem;
+    margin-bottom: 1rem;
 }
 
 .login__box {
@@ -17,11 +45,14 @@
     border-radius: 1rem;
     border: 2px solid #e5e7eb; 
     margin-bottom: 1rem; 
+    width: 100%;
+    height: 60px;
 }
 
 .login__input {
     background: none;
     width: 100%;
+    height: 100%;
     padding: 1.5rem 2.5rem 1.5rem 1.25rem;
     font-weight: var(--font-semi-bold, 600);
     border: 3px solid transparent;
@@ -61,7 +92,7 @@
     display: inline-flex;
     justify-content: center;
     align-items: center;
-    background-color: var(--first-color, #2563eb);
+    background-color: #71b4f8; /* El azul suave de tu muestra */
     color: var(--white-color, #fff);
     font-weight: var(--font-semi-bold, 600);
     padding-block: 1.25rem;
@@ -81,7 +112,6 @@
 .login__button:active {
     transform: scale(0.97);
 }
-
 
 .login__input:focus ~ .login__label,
 .login__input:not(:placeholder-shown) ~ .login__label {
@@ -104,16 +134,91 @@
     color: var(--first-color, #2563eb);
 }
 
-
-.login__spinner {
-    width: 1.25rem;
-    height: 1.25rem;
-    border: 2px solid transparent;
-    border-top-color: var(--white-color, #fff);
-    border-radius: 50%;
-    animation: spin 1s linear infinite;
+.login__link-switch {
+    background: none;
+    border: none;
+    color: #2563eb;
+    font-weight: 600;
+    cursor: pointer;
+    font-family: inherit;
 }
 
-@keyframes spin {
-    to { transform: rotate(360deg); }
+.login__link-switch.highlight {
+    font-weight: 700;
+}
+
+.login__link-switch.highlight:hover {
+    text-decoration: underline;
+}
+
+.login__social {
+    margin: 1.5rem 0;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.login__social-link__wsp {
+    display: inline-flex;
+    align-items: center;
+    column-gap: 0.6rem;
+    background-color: #25d366;
+    color: white;
+    padding: 0.75rem 2.2rem;
+    border-radius: 2rem;
+    font-size: 0.9rem;
+    font-weight: 600;
+    text-decoration: none;
+    box-shadow: 0 4px 12px rgba(37, 211, 102, 0.2);
+}
+
+.login__social-img__wsp {
+    width: 18px;
+    height: 18px;
+}
+
+.login__switch-register {
+    font-size: 0.85rem;
+    color: #64748b;
+    margin-top: 1rem;
+}
+
+.login__blob {
+    display: none; /* Oculto en móviles */
+}
+
+/* 🏔️ MEDIOS DE ESCRITORIO: Activa las dos columnas y la imagen */
+@media screen and (min-width: 1024px) {
+    .login__container {
+        grid-template-columns: 1fr 1fr; /* Divide la pantalla 50% y 50% */
+    }
+
+    .login__blob {
+        display: block;
+        position: relative;
+        height: 100vh;
+        background-color: #ffffff;
+        overflow: hidden;
+    }
+
+    /* 🌊 Ola Divisoria Blanca Orgánica */
+    .login__blob::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: -1px;
+        width: 140px;
+        height: 100%;
+        background-color: #f8fafc; /* Match con el color de fondo izquierdo */
+        clip-path: polygon(0 0, 100% 0, 32% 21%, 82% 52%, 20% 80%, 100% 100%, 0 100%);
+        z-index: 2;
+    }
+
+    .login__img {
+        width: 100%;
+        height: 100%;
+        background-image: url('/img/bg-img.jpg'); /* Carga directa desde public/img/ */
+        background-size: cover;
+        background-position: center;
+    }
 }

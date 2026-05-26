@@ -1,9 +1,18 @@
-
 :root {
     --body-font: 'Poppins', sans-serif;
     --normal-font-size: .938rem;
     --body-color: #f2f4f7;
     --text-color: #1f2937;
+}
+
+
+html,
+body,
+#root {
+    width: 100%;
+    min-height: 100vh;
+    margin: 0;
+    padding: 0;
 }
 
 body,
@@ -13,13 +22,12 @@ button {
     font-size: var(--normal-font-size);
 }
 
+
 body {
     background-color: var(--body-color);
     color: var(--text-color);
-    min-height: 100vh; 
     display: grid;
-    align-items: center;
-    justify-content: center;
+    place-items: center; 
 }
 
 .container {
