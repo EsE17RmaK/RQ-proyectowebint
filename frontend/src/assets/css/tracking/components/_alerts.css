@@ -1,0 +1,37 @@
+
+.tracking-scope .alert {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    padding: 1rem;
+    border-radius: 0.75rem;
+    margin-block: 1rem;
+    animation: fadeIn var(--transition, 0.3s) ease;
+}
+
+.tracking-scope .alert.error {
+    background: #fef2f2;
+    color: #ef4444;
+    font-weight: var(--font-medium, 500);
+    border: 1px solid #fee2e2;
+}
+
+.tracking-scope .alert.empty {
+    background: var(--container-color, #f3f4f6);
+    color: var(--text-color, #6b7280);
+    text-align: left;
+    border: 1px solid #e5e7eb;
+}
+
+.tracking-scope .alert.empty h4 {
+    margin-bottom: 0.25rem;
+    font-size: var(--normal-font-size, 0.938rem);
+    color: var(--title-color, #0a0d14);
+}
+
+.tracking-scope .icon {
+    font-size: 1.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}

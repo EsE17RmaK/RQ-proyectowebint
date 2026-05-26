@@ -1,0 +1,23 @@
+/* =========================================
+   ⏳ LOADER
+========================================= */
+.loader {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 30px;
+    animation: fadeIn var(--transition) ease;
+}
+
+.loader i {
+    font-size: 40px;
+    color: var(--color-primary);
+    animation: spin 1s linear infinite;
+}
+
+.loader p {
+    margin-top: 10px;
+    color: var(--text-secondary);
+    font-size: 14px;
+}

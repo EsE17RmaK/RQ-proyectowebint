@@ -1,0 +1,27 @@
+/* SETTINGS */
+@import "../../css/tracking/settings/_fonts.css";
+@import "../../css/tracking/settings/_variables.css";
+
+/* BASE */
+@import "../../css/tracking/base/_reset.css";
+@import "../../css/tracking/base/_base.css";
+
+/* LAYOUT */
+@import "../../css/tracking/layout/_container.css";
+
+/* COMPONENTS */
+@import "../../css/tracking/components/_card.css";
+@import "../../css/tracking/components/_form.css";
+@import "../../css/tracking/components/_buttons.css";
+@import "../../css/tracking/components/_alerts.css";
+@import "../../css/tracking/components/_badges.css";
+@import "../../css/tracking/components/_loader.css";
+@import "../../css/tracking/components/_modal.css";
+@import "../../css/tracking/components/_result.css";
+@import "../../css/tracking/components/_animations.css";
+
+/* UTILITIES */
+@import "../../css/tracking/utilities/_utilities.css";
+
+/* RESPONSIVE */
+@import "../../css/tracking/responsive/_responsive.css";

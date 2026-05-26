@@ -1,0 +1,12 @@
+/* =========================================
+   🧰 UTILIDADES
+========================================= */
+.hidden {
+    display: none !important;
+}
+
+.fade-out {
+    opacity: 0;
+    transform: translateY(-10px);
+    transition: all 0.4s ease;
+}

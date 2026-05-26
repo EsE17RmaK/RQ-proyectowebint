@@ -1,0 +1,58 @@
+
+@media screen and (max-width: 320px) {
+    .container {
+        margin-inline: 1rem;
+    }
+    
+    .login__view-container {
+        padding: 1.75rem 1rem;
+    }
+
+    .login__title {
+        font-size: 1.5rem;
+        margin-bottom: 1.5rem;
+    }
+}
+
+
+@media screen and (min-width: 410px) {
+    .login__form {
+        width: 100%;
+    }
+
+    .login__group {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1rem;
+    }
+}
+
+@media screen and (min-width: 1150px) {
+
+    .login {
+        padding: 2rem;
+    }
+
+    .login__view-container {
+        max-width: 480px; 
+        padding: 3rem 2.5rem;
+    }
+
+    .login__title {
+        margin-bottom: 2.5rem;
+    }
+
+    .login__button {
+        margin-top: 1.5rem;
+        margin-bottom: 1.5rem;
+    }
+
+
+    .login__blob {
+        display: block;
+        height: 100vh;
+        position: absolute;
+        top: 0;
+        right: 0;
+        z-index: -1; 
+    }
+}

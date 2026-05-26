@@ -1,0 +1,5 @@
+/* Estilos para el Login, Registro, Olvidé mi contraseña, etc. */
+@import './assets/css/access/main.css';
+
+/* Estilos para el Dashboard, Tablas y Vistas de requerimientos */
+@import './assets/css/tracking/main.css';

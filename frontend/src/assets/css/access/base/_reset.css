@@ -1,0 +1,36 @@
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+input,
+button {
+    border: none;
+    outline: none;
+    background: none; 
+    font-family: inherit; 
+}
+
+a {
+    text-decoration: none;
+}
+
+img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+}
+
+.login__switch button {
+    background: none;
+    border: none;
+    color: var(--first-color, #4a90e2); 
+    cursor: pointer;
+    font-weight: 500;
+    padding: 0;
+}
+
+.login__switch button:hover {
+    text-decoration: underline;
+}

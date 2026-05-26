@@ -1,0 +1,18 @@
+# Ignorar archivos del Backend (Spring Boot)
+**/target/
+**/.mvn/
+**/mvnw
+**/mvnw.cmd
+**/.idea/
+**/.settings/
+**/.classpath/
+**/.project/
+
+# Ignorar archivos del Frontend
+**/node_modules/
+**/dist/
+**/.env.local
+
+# Archivos del sistema
+.DS_Store
+Thumbs.db

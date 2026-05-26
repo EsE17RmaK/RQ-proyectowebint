@@ -1,0 +1,17 @@
+
+.tracking-scope form,
+.tracking-scope select,
+.tracking-scope input,
+.tracking-scope button {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: var(--body-font, 'Montserrat', sans-serif); 
+}
+
+.tracking-scope hr {
+    margin: 20px 0;
+    border: none;
+    border-top: 2px solid #e5e7eb; 
+    width: 100%;
+}

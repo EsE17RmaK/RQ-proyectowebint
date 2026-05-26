@@ -1,0 +1,67 @@
+.login__social {
+    margin-bottom: 1.5rem;
+    display: flex;
+    justify-content: center;
+}
+
+.login__social-links {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+
+.login__social-link__wsp {
+    width: 100%;
+    max-width: 320px;
+    height: 50px;
+    background-color: #25D366;
+    border-radius: 10rem;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    column-gap: .75rem;
+    text-decoration: none;
+    transition: box-shadow .4s, background-color .4s;
+}
+
+.login__social-link__wsp:hover {
+    background-color: #22c45e;
+    box-shadow: 0 8px 24px rgba(37, 211, 102, 0.3);
+}
+
+.login__social-img__wsp {
+    width: 1.5rem;
+    height: 1.5rem;
+}
+
+.login__social-text {
+    color: #ffffff;
+    font-weight: var(--font-semi-bold, 600);
+    font-size: 0.9rem;
+}
+
+.login__switch {
+    text-align: center;
+    font-size: var(--small-font-size, 0.813rem);
+    margin-top: 1rem;
+    color: #6b7280;
+}
+
+
+.login__switch button {
+    background: none !important;
+    border: none !important;
+    outline: none !important;
+    padding: 0 !important;
+    color: var(--first-color, #2563eb);
+    font-size: var(--small-font-size, 0.813rem);
+    font-weight: var(--font-semi-bold, 600);
+    cursor: pointer;
+    transition: color .3s, text-decoration .3s;
+    display: inline;
+}
+
+.login__switch button:hover {
+    color: var(--first-color-alt, #1d4ed8);
+    text-decoration: underline;
+}

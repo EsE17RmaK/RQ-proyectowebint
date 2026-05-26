@@ -1,0 +1,38 @@
+
+.is-loading {
+    pointer-events: none;
+    opacity: 0.6;
+    cursor: not-allowed;
+}
+
+.input-success {
+    border-color: var(--success-color, #28a745) !important;
+}
+
+.input-error {
+    border-color: #ef4444 !important;
+    background-color: #fef2f2;
+}
+
+.login__password {
+    transition: transform 0.2s ease, color 0.2s ease;
+}
+
+.login__password:hover {
+    transform: scale(1.15);
+    color: var(--first-color, #2563eb);
+}
+
+.debit-card {
+    perspective: 1000px;
+}
+
+.debit-card.flip .card-inner {
+    transform: rotateY(180deg);
+}
+
+.card-inner {
+    transition: transform 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+    transform-style: preserve-3d;
+    position: relative;
+}

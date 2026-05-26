@@ -1,0 +1,111 @@
+
+.tracking-scope .result-card {
+    margin-top: 1.5rem;
+    width: 100%;
+    animation: fadeInResult 0.4s ease forwards;
+}
+
+.tracking-scope .result-title {
+    font-size: var(--normal-font-size, 0.938rem);
+    font-weight: var(--font-semi-bold, 600);
+    color: var(--title-color, #0a0d14);
+    text-align: left;
+    margin-bottom: 0.75rem;
+}
+
+.tracking-scope .result-box {
+    background: var(--container-color, #f3f4f6);
+    border-radius: 1rem;
+    padding: 1.25rem;
+    box-shadow: inset 0 2px 4px rgba(0,0,0,0.02);
+}
+
+.tracking-scope .result-header {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    margin-bottom: 1rem;
+}
+
+.tracking-scope .code {
+    margin-left: auto;
+    font-family: monospace;
+    font-weight: var(--font-semi-bold, 600);
+    color: var(--first-color, #2563eb);
+    background-color: var(--white-color, #ffffff);
+    padding: 0.25rem 0.5rem;
+    border-radius: 0.35rem;
+    font-size: var(--small-font-size, 0.813rem);
+}
+
+.tracking-scope .result-content {
+    background: var(--white-color, #ffffff);
+    border-radius: 0.75rem;
+    padding: 1rem;
+    margin-bottom: 1rem;
+    border: 1px solid #e5e7eb;
+}
+
+.tracking-scope .result-content h3 {
+    margin-bottom: 0.75rem;
+    color: var(--title-color, #0a0d14);
+    font-size: 1.1rem;
+    font-weight: var(--font-semi-bold, 600);
+    text-align: left;
+}
+
+.tracking-scope .result-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.tracking-scope .result-grid .row {
+    display: grid;
+    grid-template-columns: 110px 1fr;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.tracking-scope .result-grid .label {
+    color: var(--text-color, #6b7280);
+    font-size: var(--small-font-size, 0.813rem);
+    font-weight: var(--font-medium, 500);
+    text-align: left;
+}
+
+.tracking-scope .result-grid .value {
+    color: var(--title-color, #0a0d14);
+    font-size: var(--small-font-size, 0.813rem);
+    font-weight: var(--font-semi-bold, 600);
+    text-align: left;
+}
+
+.tracking-scope .result-info {
+    display: flex;
+    gap: 0.75rem;
+    align-items: center;
+    background: hsla(221, 83%, 53%, 0.08);
+    padding: 0.85rem;
+    border-radius: 0.5rem;
+    color: var(--first-color, #2563eb);
+    text-align: left;
+}
+
+.tracking-scope .result-info p {
+    font-size: var(--tiny-font-size, 0.75rem);
+    font-weight: var(--font-medium, 500);
+    line-height: 1.3;
+}
+
+.tracking-scope .info-icon {
+    font-size: 1.5rem;
+    color: var(--first-color, #2563eb);
+    display: flex;
+    align-items: center;
+}
+
+@keyframes fadeInResult {
+    from { opacity: 0; transform: translateY(0.5rem); }
+    to { opacity: 1; transform: translateY(0); }
+}

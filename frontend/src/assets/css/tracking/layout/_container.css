@@ -1,0 +1,24 @@
+
+
+.tracking-scope .container {
+    width: 100%;
+    max-width: 520px; 
+    margin-inline: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem; 
+    padding-block: 2rem;
+}
+
+.tracking-scope .logo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 0.5rem;
+}
+
+.tracking-scope .logo img {
+    height: 45px; 
+    width: auto;
+    object-fit: contain;
+}

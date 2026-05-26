@@ -1,0 +1,34 @@
+
+:root {
+    --body-font: 'Poppins', sans-serif;
+    --normal-font-size: .938rem;
+    --body-color: #f2f4f7;
+    --text-color: #1f2937;
+}
+
+body,
+input,
+button {
+    font-family: var(--body-font);
+    font-size: var(--normal-font-size);
+}
+
+body {
+    background-color: var(--body-color);
+    color: var(--text-color);
+    min-height: 100vh; 
+    display: grid;
+    align-items: center;
+    justify-content: center;
+}
+
+.container {
+    max-width: 1120px;
+    margin-inline: 1.5rem;
+    width: 100%;
+}
+
+.grid {
+    display: grid;
+    gap: 1rem;
+}

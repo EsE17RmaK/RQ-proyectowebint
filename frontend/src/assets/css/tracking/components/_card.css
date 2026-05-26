@@ -1,0 +1,30 @@
+
+.tracking-scope .card {
+    background: var(--white-color, #ffffff);
+    padding: 2rem 1.5rem;
+    border-radius: 1.5rem;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+    width: 100%;
+    text-align: center;
+    transition: transform 0.3s ease;
+}
+
+.tracking-scope .card h2 {
+    font-size: var(--big-font-size, 1.5rem);
+    margin-bottom: 0.75rem;
+    color: var(--title-color, #0a0d14);
+    font-weight: var(--font-semi-bold, 600);
+}
+
+.tracking-scope .subtitle {
+    font-size: var(--small-font-size, 0.875rem);
+    color: var(--text-color, #6b7280);
+    line-height: 1.4;
+    margin-bottom: 1.75rem;
+}
+
+.tracking-scope .support p {
+    font-size: var(--tiny-font-size, 0.75rem);
+    color: var(--text-color, #6b7280);
+    margin-bottom: 0.75rem;
+}

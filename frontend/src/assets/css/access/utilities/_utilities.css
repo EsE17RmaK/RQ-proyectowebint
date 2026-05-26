@@ -1,0 +1,40 @@
+
+.text-success {
+    color: var(--success-color, #28a745) !important;
+}
+
+.login__success-message {
+    color: var(--success-color, #28a745);
+    font-size: var(--tiny-font-size, 0.75rem);
+    font-weight: var(--font-medium, 500);
+    margin-top: 0.5rem;
+}
+
+.login__error-message {
+    color: #ef4444;
+    font-size: var(--tiny-font-size, 0.75rem);
+    font-weight: var(--font-medium, 500);
+    margin-top: 0.5rem;
+    animation: fadeIn 0.2s ease;
+}
+
+#errorMessage {
+    text-align: left;
+}
+
+.button-spinner {
+    width: 18px;
+    height: 18px;
+    border: 2.5px solid rgba(255, 255, 255, 0.3);
+    border-top-color: var(--white-color, #ffffff);
+    border-radius: 50%;
+    animation: spin Utilities 0.75s linear infinite;
+    display: inline-block;
+    vertical-align: middle;
+}
+
+@keyframes spinUtilities {
+    to {
+        transform: rotate(360deg);
+    }
+}

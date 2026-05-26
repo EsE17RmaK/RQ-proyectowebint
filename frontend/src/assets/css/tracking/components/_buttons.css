@@ -1,0 +1,50 @@
+
+.tracking-scope button {
+    font-family: var(--body-font);
+    font-weight: var(--font-medium, 500);
+}
+
+.tracking-scope .btn-primary {
+    width: 100%;
+    padding: 0.85rem 1.25rem;
+    background: var(--first-color, #2563eb);
+    color: var(--white-color, #ffffff);
+    border: none;
+    border-radius: 0.75rem;
+    font-size: var(--normal-font-size, 0.938rem);
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    transition: background-color 0.3s, box-shadow 0.3s, transform 0.1s;
+}
+
+.tracking-scope .btn-primary:hover {
+    background-color: var(--first-color-alt, #1d4ed8);
+    box-shadow: 0 8px 20px hsla(221, 83%, 53%, 0.25);
+}
+
+.tracking-scope .btn-primary:active {
+    transform: scale(0.98);
+}
+
+.tracking-scope .btn-secondary {
+    padding: 0.65rem 1.25rem;
+    background-color: var(--container-color, #f3f4f6);
+    color: var(--first-color, #2563eb);
+    border: 2px solid transparent;
+    border-radius: 0.5rem;
+    font-size: var(--small-font-size, 0.813rem);
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s, transform 0.1s;
+}
+
+.tracking-scope .btn-secondary:hover {
+    background-color: #e5e7eb;
+    color: var(--first-color-alt, #1d4ed8);
+}
+
+.tracking-scope .btn-secondary:active {
+    transform: scale(0.98);
+}

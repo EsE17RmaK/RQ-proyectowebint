@@ -1,0 +1,29 @@
+
+.tracking-scope .status-icon {
+    font-size: 1.75rem;
+}
+
+.tracking-scope .badge {
+    display: inline-block;
+    padding: 0.35rem 0.75rem;
+    border-radius: 2rem;
+    font-size: var(--tiny-font-size, 0.688rem);
+    font-weight: var(--font-semi-bold, 600);
+    text-transform: uppercase;
+    letter-spacing: 0.03rem;
+}
+
+.tracking-scope .badge.success {
+    background: #e6f4ea;
+    color: var(--success-color, #28a745);
+}
+
+.tracking-scope .badge.pending {
+    background: #fff4e5;
+    color: #ff9800; /* Amber Warning corporativo */
+}
+
+.tracking-scope .badge.process {
+    background: #e6f0ff;
+    color: var(--first-color, #2563eb);
+}

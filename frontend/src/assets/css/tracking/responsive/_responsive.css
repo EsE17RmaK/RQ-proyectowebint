@@ -1,0 +1,34 @@
+
+@media screen and (min-width: 576px) {
+    .tracking-scope .container {
+        max-width: 520px; 
+    }
+
+    .tracking-scope .card {
+        padding: 2.5rem;
+    }
+
+    .tracking-scope .card h2 {
+        font-size: 1.75rem;
+    }
+}
+
+@media screen and (min-width: 1200px) {
+    .tracking-scope {
+        padding: 2.5rem;
+    }
+
+    .tracking-scope .container {
+        max-width: 560px; 
+    }
+
+    .tracking-scope .card {
+        padding: 3rem 2.5rem;
+        box-shadow: 0 15px 40px rgba(0, 0, 0, 0.06); 
+    }
+
+    .tracking-scope .result-grid .row {
+        grid-template-columns: 140px 1fr; 
+        gap: 1rem;
+    }
+}
