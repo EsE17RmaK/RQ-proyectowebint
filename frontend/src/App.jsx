@@ -7,19 +7,33 @@ import DashboardView from './components/DashboardView';
 import './App.css';
 
 function App() {
-  // Estado para controlar qué pantalla se muestra
+
   const [currentView, setCurrentView] = useState('login');
+
+  const [userLogged, setUserLogged] = useState(null);
+
+  const handleLoginSuccess = (usuarioData) => {
+    setUserLogged(usuarioData);
+  };
 
   return (
     <div className="app-container">
-      {currentView === 'login' && <LoginView onSwitchView={setCurrentView} />}
+      {currentView === 'login' && (
+        <LoginView 
+          onSwitchView={setCurrentView} 
+          onLoginSuccess={handleLoginSuccess} 
+        />
+      )}
       {currentView === 'register' && <RegisterView onSwitchView={setCurrentView} />}
       {currentView === 'forgot' && <ForgotView onSwitchView={setCurrentView} />}
       {currentView === 'reset' && <ResetView onSwitchView={setCurrentView} />}
       
-
-
-      {currentView === 'dashboard' && <DashboardView onSwitchView={setCurrentView} />}
+      {currentView === 'dashboard' && (
+        <DashboardView 
+          onSwitchView={setCurrentView} 
+          usuario={userLogged} 
+        />
+      )}
     </div>
   );
 }
