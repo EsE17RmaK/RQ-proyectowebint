@@ -1,4 +1,5 @@
 
+
 .login {
     position: relative;
     min-height: 100vh;
@@ -6,34 +7,34 @@
     display: flex; 
     align-items: center;
     justify-content: center;
-    overflow: hidden;
-    padding: 1.5rem;
-}
-
-.login__blob {
-    display: none; 
+    background-color: #f8fafc;
+    overflow-x: hidden;
+    padding: 0; 
+    box-sizing: border-box;
 }
 
 
 .login__view-container {
     width: 100%;
-    max-width: 450px; 
-    background-color: var(--container-color, #ffffff);
-    padding: 2.5rem 2rem;
-    border-radius: 1.5rem;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+    max-width: 100%; 
+    min-height: 100vh;
+    background-color: transparent;
     position: relative;
+    box-sizing: border-box;
 }
-
 
 .login__access,
 .login__register,
 .login__forgot,
 .login__reset {
     width: 100%;
-    animation: slideInAccess 0.45s cubic-bezier(0.25, 1, 0.5, 1) forwards;
+    height: 100%;
 }
 
+
+.login__access {
+    animation: slideInAccess 0.45s cubic-bezier(0.25, 1, 0.5, 1) forwards;
+}
 
 @keyframes slideInAccess {
     from {
@@ -47,8 +48,24 @@
 }
 
 
-@media screen and (max-width: 350px) {
+@media screen and (min-width: 1024px) {
     .login__view-container {
+        max-width: 100vw;      
+        height: 100vh;         
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    
+    /* Forzamos a que el formulario interno no se estire horizontalmente */
+    .login__content-form {
+        max-width: 500px;     
+        margin: 0 auto;      
+    }
+}
+
+@media screen and (max-width: 350px) {
+    .login__content-form {
         padding: 2rem 1.25rem;
     }
 }

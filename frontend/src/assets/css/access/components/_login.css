@@ -4,10 +4,12 @@
 
 .login__container {
     min-height: 100vh;
+    width: 100vw; 
     background-color: #f8fafc;
     font-family: 'Montserrat', sans-serif;
     display: grid;
-    grid-template-columns: 1fr; /* Una sola columna en móvil */
+    grid-template-columns: 1fr;
+    box-sizing: border-box;
 }
 
 .login__content-form {
@@ -15,8 +17,9 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    padding: 2rem;
+    padding: 2.5rem;
     width: 100%;
+    box-sizing: border-box;
 }
 
 .login__title {
@@ -24,40 +27,48 @@
     color: var(--title-color, #1f2937);
     text-align: center;
     margin-bottom: 2rem;
+    font-weight: 700;
 }
 
 .login__form {
     width: 100%;
-    max-width: 380px;
+    max-width: 360px; /* Tamaño estándar de formulario para que no se estire */
 }
 
 .login__area {
     display: grid;
-    row-gap: 1rem;
-    margin-bottom: 1rem;
+    row-gap: 1.25rem;
+    margin-bottom: 1.5rem;
+    width: 100%;
 }
 
+/* 🔒 CORRECCIÓN DE ALINEACIÓN: Caja contenedora con posición relativa estricta */
 .login__box {
     position: relative;
     display: flex;
     align-items: center;
-    background-color: var(--container-color, #fff);
+    background-color: #ffffff;
     border-radius: 1rem;
     border: 2px solid #e5e7eb; 
-    margin-bottom: 1rem; 
     width: 100%;
     height: 60px;
+    box-sizing: border-box;
 }
 
+/* ✍️ ENTRADA DE TEXTO ALINEADA A LA IZQUIERDA */
 .login__input {
-    background: none;
+    background: transparent;
     width: 100%;
     height: 100%;
-    padding: 1.5rem 2.5rem 1.5rem 1.25rem;
-    font-weight: var(--font-semi-bold, 600);
+    padding: 1.5rem 2.5rem 1rem 1.25rem;
+    font-family: inherit;
+    font-weight: 600;
     border: 3px solid transparent;
     border-radius: 1rem;
     z-index: 1;
+    text-align: left;           /* Fuerza que el texto digitado empiece a la izquierda */
+    outline: none;
+    box-sizing: border-box;
     transition: border-color .4s;
 }
 
@@ -65,26 +76,42 @@
     transition: background-color 6000s, color 6000s;
 }
 
+/* 🏷️ CLAVADO A LA IZQUIERDA: Ubicación fija de "Correo" y "Contraseña" */
 .login__label {
     position: absolute;
-    left: 1.25rem;
-    font-weight: var(--font-semi-bold, 600);
-    color: var(--text-color-light, #9ca3af);
+    left: 1.25rem;              /* Alineación fija respecto al borde izquierdo de la caja */
+    top: 50%;
+    transform: translateY(-50%);
+    text-align: left;
+    font-weight: 600;
+    color: #9ca3af;
     transition: transform .4s, font-size .4s, color .4s;
     pointer-events: none; 
+    z-index: 2;
 }
 
+/* 👁️ Íconos y botones de ojo fijos a la derecha */
 .login__icon {
     position: absolute;
-    right: 1rem;
+    right: 1.25rem;             /* Forzado al borde derecho interno */
     font-size: 1.25rem;
     color: #9ca3af;
     transition: color .4s;
+    z-index: 10;
 }
 
 .login__password {
     cursor: pointer;
-    z-index: 10;
+}
+
+/* 🎯 ANIMACIÓN DE LA ETIQUETA: Sube verticalmente manteniéndose a la izquierda */
+.login__input:focus ~ .login__label,
+.login__input:not(:placeholder-shown) ~ .login__label {
+    transform: translateY(-22px) translateX(0px); /* Evita desplazamientos raros a la derecha */
+    font-size: 0.75rem;
+    color: #2563eb;
+    background-color: #ffffff; /* Evita que el borde del input cruce la palabra */
+    padding-inline: 0.25rem;
 }
 
 .login__button {
@@ -92,10 +119,10 @@
     display: inline-flex;
     justify-content: center;
     align-items: center;
-    background-color: #71b4f8; /* El azul suave de tu muestra */
-    color: var(--white-color, #fff);
-    font-weight: var(--font-semi-bold, 600);
-    padding-block: 1.25rem;
+    background-color: #71b4f8; 
+    color: #ffffff;
+    font-weight: 600;
+    padding-block: 1.1rem;
     border-radius: 4rem;
     margin-block: 1rem;
     cursor: pointer;
@@ -105,33 +132,12 @@
 }
 
 .login__button:hover {
-    background-color: var(--first-color-alt, #1d4ed8);
-    box-shadow: 0 8px 24px hsla(221, 83%, 53%, 0.3);
+    background-color: #1d4ed8;
+    box-shadow: 0 8px 24px rgba(29, 78, 216, 0.2);
 }
 
 .login__button:active {
     transform: scale(0.97);
-}
-
-.login__input:focus ~ .login__label,
-.login__input:not(:placeholder-shown) ~ .login__label {
-    transform: translateY(-12px) translateX(-4px);
-    font-size: var(--tiny-font-size, 0.75rem);
-    color: var(--first-color, #2563eb);
-}
-
-.login__input:focus,
-.login__input:not(:placeholder-shown) {
-    padding-block: 2rem 1rem;
-}
-
-.login__input:focus {
-    border-color: var(--first-color, #2563eb);
-    box-shadow: 0 0 0 4px hsla(221, 83%, 53%, 0.15);
-}
-
-.login__input:focus ~ .login__icon {
-    color: var(--first-color, #2563eb);
 }
 
 .login__link-switch {
@@ -183,20 +189,27 @@
     margin-top: 1rem;
 }
 
+/* Contenedor gráfico del lado derecho */
 .login__blob {
     display: none; /* Oculto en móviles */
 }
 
-/* 🏔️ MEDIOS DE ESCRITORIO: Activa las dos columnas y la imagen */
+/* ==========================================================================
+   🏔️ MEDIOS DE ESCRITORIO: Activa las dos columnas e integra la imagen al 100%
+   ========================================================================== */
 @media screen and (min-width: 1024px) {
     .login__container {
-        grid-template-columns: 1fr 1fr; /* Divide la pantalla 50% y 50% */
+        grid-template-columns: 1fr 1fr; /* Divide la pantalla 50% formulario y 50% imagen */
+        width: 100%;
+        height: 100vh;
     }
 
+    /* Contenedor del lado derecho */
     .login__blob {
         display: block;
         position: relative;
         height: 100vh;
+        width: 100%;
         background-color: #ffffff;
         overflow: hidden;
     }
@@ -207,18 +220,21 @@
         position: absolute;
         top: 0;
         left: -1px;
-        width: 140px;
+        width: 120px;
         height: 100%;
-        background-color: #f8fafc; /* Match con el color de fondo izquierdo */
+        background-color: #f8fafc; /* Hace match exacto con el fondo del formulario */
         clip-path: polygon(0 0, 100% 0, 32% 21%, 82% 52%, 20% 80%, 100% 100%, 0 100%);
         z-index: 2;
     }
 
+    /* 🏔️ CORRECCIÓN DE IMAGEN: Forzar tamaño visible al 100% sin necesidad de zoom */
     .login__img {
         width: 100%;
         height: 100%;
-        background-image: url('/img/bg-img.jpg'); /* Carga directa desde public/img/ */
+        background-image: url('/img/bg-img.jpg'); /* Carga directa desde tu public/img/ */
         background-size: cover;
-        background-position: center;
+        background-position: center center;
+        background-repeat: no-repeat;
+        display: block;
     }
 }

@@ -1,3 +1,7 @@
+/* ==========================================================================
+   ⚙️ CONFIGURACIÓN DE ESTILOS BASE GLOBALES (RESET DE RESORTE DE ESCALA)
+   ========================================================================== */
+
 :root {
     --body-font: 'Poppins', sans-serif;
     --normal-font-size: .938rem;
@@ -5,7 +9,7 @@
     --text-color: #1f2937;
 }
 
-
+/* 🔒 BLINDAJE DE RESOLUCIÓN: Evita desbordamientos en monitores Full HD o 4K */
 html,
 body,
 #root {
@@ -13,6 +17,8 @@ body,
     min-height: 100vh;
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
+    overflow-x: hidden; /* Bloquea scrolls horizontales que dañen la vista */
 }
 
 body,
@@ -22,18 +28,19 @@ button {
     font-size: var(--normal-font-size);
 }
 
-
+/* 🎯 CORRECCIÓN INTEGRAL: Cambiamos grid por block para liberar el diseño de las dos mitades */
 body {
     background-color: var(--body-color);
     color: var(--text-color);
-    display: grid;
-    place-items: center; 
+    display: block; /* Permite que _layout.css maneje el 50% formulario y 50% imagen de forma limpia */
+    position: relative;
 }
 
 .container {
     max-width: 1120px;
     margin-inline: 1.5rem;
     width: 100%;
+    box-sizing: border-box;
 }
 
 .grid {

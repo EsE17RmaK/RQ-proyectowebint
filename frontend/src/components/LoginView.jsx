@@ -107,8 +107,6 @@ export default function LoginView({ onSwitchView, onLoginSuccess }) {
             <span id="loginButtonText">Acceso</span>
           </button>
         </form>
-
-  ge
         <div className="login__social">
           <a href="https://wa.me/51999999999" target="_blank" rel="noreferrer" className="login__social-link__wsp">
             <img src="/img/icon/icon-whatsapp.svg" alt="Icono de WhatsApp" className="login__social-img__wsp" />
@@ -121,9 +119,13 @@ export default function LoginView({ onSwitchView, onLoginSuccess }) {
         </p>
       </div>
 
-      {/* COLUMNA DERECHA: El paisaje curvo con la foto bg-img.jpg */}
+
       <div className="login__blob">
-        <div className="login__img"></div>
+        <img 
+          src="/img/bg-img.jpg" 
+          alt="Paisaje Corporativo" 
+          className="login__img" 
+        />
       </div>
 
     </div>
